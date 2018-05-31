@@ -91,35 +91,32 @@
 		<div class="col-lg-offset-2 col-md-offset-1 col-lg-8 col-md-10 col-md-offset-1 col-lg-offset-2">
 			<h4>Contact  Forms</h4>
 			<form name="inputForm" class="form-horizontal"  
-				onsubmit="return validateForm()" role="form" method="post">
+				onsubmit="return validateForm()" role="form" action="addtocontact.php" method="post">
 				<div class="form-group">
 					<label for="name" class="col-sm-2 control-label">Full Name:</label>
 					<div class="col-sm-10">
-					   <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" required>
+					   <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name" required>
 					</div>
 					<label for="email" class="col-sm-2 control-label">Email:</label>
 					<div class="col-sm-10">
-					   <input type="text" class="form-control" id="email" placeholder="Enter Your Email" required>
+					   <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
 					</div>
-					<label for="Enquiry" class="col-sm-2 control-label">Enquiry Type</label>
+					<label for="Enquiry" class="col-sm-2 control-label">Enquiry Type:</label>
 					<div class="col-sm-10">
-						<div class="dropdown">
-							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Your Enquiry Type
-							<span class="caret"></span></button>
-							<ul class="dropdown-menu">
-							  <li><a href="#">Ask a question </a></li>
-							  <li><a href="#">Become a volunteer</a></li>
-							  <li><a href="#">Request educational resources</a></li>
-							</ul>
-						</div>
+						<select class="form-control" name="type" id="type">
+							<option value="">Choose Your Enquiry Type</option>
+							<option value="Ask a question">Ask a question</option>
+							<option value="Become a volunteer">Become a volunteer</option>
+							<option value="Request educational resources">Request educational resources</option>
+						</select>
 					</div>
 					<label for="Enquiry" class="col-sm-2 control-label">Comments:</label>
 					<div class="col-sm-10">
-					   <textarea class="form-control" rows="8" id="comment" placeholder="Enter Your comment" ></textarea>
+					   <textarea class="form-control" rows="8" id="comment" name="comment" placeholder="Enter Your comment" ></textarea>
 					</div>					
 					<div class="col-lg-8 col-md-8"> 
 					   <br />
-					   <input type="submit" class="btn btn-primary" value="Submit">
+					   <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Submit">
 					   <!-- <input type="submit" class="btn btn-info" value="Clear">  -->
 					</div>
 				</div>
